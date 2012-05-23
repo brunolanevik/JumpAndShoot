@@ -3,8 +3,8 @@ package com.gmail.bruno.jumpandshoot.Entity;
 public class Player extends Entity{
 	protected String ip, name;
 	protected int damageModifier;
-	public Player(int x, int y, int z, int health, int damage, float size, String ip, String name) {
-		super(x, y, z, health, damage, size);
+	public Player(int x, int y, int z, int health, int damage, float size, String ip, String name, String texture) {
+		super(x, y, z, health, damage, size, texture);
 		this.name = name;
 		this.ip = ip;
 		// TODO Auto-generated constructor stub

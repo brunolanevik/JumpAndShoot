@@ -1,15 +1,18 @@
 package com.gmail.bruno.jumpandshoot.Entity;
 
+/*Super object for entities*/
 public abstract class Entity {
 	protected int x,y,z,health,damage;
 	protected float size;
-	public Entity(int x, int y, int z, int health, int damage, float size){
+	protected String texture;
+	public Entity(int x, int y, int z, int health, int damage, float size, String texture){
 		this.x = x;
 		this.y = y;
 		this.z = z;
 		this.health = health;
 		this.damage = damage;
 		this.size = size;
+		this.texture = texture;
 	}
 	public int getX() {
 		return x;
