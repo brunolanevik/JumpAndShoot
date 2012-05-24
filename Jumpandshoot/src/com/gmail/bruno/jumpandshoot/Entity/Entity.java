@@ -1,47 +1,34 @@
 package com.gmail.bruno.jumpandshoot.Entity;
 
+import com.jme3.scene.Geometry;
+
 /*Super object for entities*/
-public abstract class Entity {
-	protected int x,y,z,health,damage;
-	protected float size;
+public abstract class Entity extends Geometry{
+	protected float size, health, damage;
 	protected String texture;
-	public Entity(int x, int y, int z, int health, int damage, float size, String texture){
-		this.x = x;
-		this.y = y;
-		this.z = z;
+	public Entity(float x, float y, float z, float health, float damage, float size, String texture){
 		this.health = health;
 		this.damage = damage;
+		this.setLocalTranslation(x, y, z);
+		this.scale(size);
 		this.size = size;
 		this.texture = texture;
 	}
-	public int getX() {
-		return x;
+	@Override
+	public void setLocalTranslation(float x, float y, float z) {
+		// TODO Auto-generated method stub
+		super.setLocalTranslation(x, y, z);
 	}
-	public void setX(int x) {
-		this.x = x;
-	}
-	public int getY() {
-		return y;
-	}
-	public void setY(int y) {
-		this.y = y;
-	}
-	public int getZ() {
-		return z;
-	}
-	public void setZ(int z) {
-		this.z = z;
-	}
-	public int getHealth() {
+	public float getHealth() {
 		return health;
 	}
-	public void setHealth(int health) {
+	public void setHealth(float health) {
 		this.health = health;
 	}
-	public int getDamage() {
+	public float getDamage() {
 		return damage;
 	}
-	public void setDamage(int damage) {
+	public void setDamage(float damage) {
 		this.damage = damage;
 	}
 	public float getSize() {
