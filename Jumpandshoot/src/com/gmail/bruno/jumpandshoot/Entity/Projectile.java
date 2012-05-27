@@ -1,5 +1,6 @@
 package com.gmail.bruno.jumpandshoot.Entity;
 
+import com.jme3.math.Vector3f;
 import com.jme3.scene.debug.Arrow;
 
 /*
@@ -13,8 +14,9 @@ import com.jme3.scene.debug.Arrow;
  */
 
 public abstract class Projectile extends Arrow{
-	public Projectile(int x, int y, int z, int health, int damage, float size, String texture) {
+	public Projectile(Vector3f extent, int damage, float size, String texture) {
 		// TODO Auto-generated constructor stub
+		this.setArrowExtent(extent);
 	}
 
 	protected boolean isMelee;
