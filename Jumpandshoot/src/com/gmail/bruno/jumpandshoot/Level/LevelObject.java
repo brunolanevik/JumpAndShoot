@@ -1,8 +1,17 @@
 package com.gmail.bruno.jumpandshoot.Level;
 
-/*LevelObject that represents a part of the map*/
+import com.jme3.scene.Geometry;
 
-public abstract class LevelObject {
+/*
+ * LevelObject
+ * 
+ * Version 1.0
+ *
+ * 2012-05-27
+ * 
+ * Copyright © 2012, Bruno Gustav Lanevik. All rights reserved.
+ */
+public abstract class LevelObject extends Geometry {
 	protected int x,y,z;
 	protected float size;
 	protected String texture;

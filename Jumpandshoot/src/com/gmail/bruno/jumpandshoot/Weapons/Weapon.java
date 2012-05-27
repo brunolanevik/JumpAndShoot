@@ -1,6 +1,18 @@
 package com.gmail.bruno.jumpandshoot.Weapons;
 
-public abstract class Weapon {
+import com.jme3.scene.Geometry;
+
+/*
+ * Weapon
+ * 
+ * Version 1.0
+ *
+ * 2012-05-27
+ * 
+ * Copyright © 2012, Bruno Gustav Lanevik. All rights reserved.
+ */
+
+public abstract class Weapon extends Geometry{
 	protected int damageModifier, bulletSpread, charge;
 	protected String path;
 	protected boolean isChargeable;

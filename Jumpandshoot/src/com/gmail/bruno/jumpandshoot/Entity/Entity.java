@@ -1,5 +1,14 @@
 package com.gmail.bruno.jumpandshoot.Entity;
 
+/*
+ * Entity
+ * 
+ * Version 1.0
+ *
+ * 2012-05-27
+ * 
+ * Copyright © 2012, Bruno Gustav Lanevik. All rights reserved.
+ */
 import com.jme3.scene.Geometry;
 
 /*Super object for entities*/
@@ -13,11 +22,6 @@ public abstract class Entity extends Geometry{
 		this.scale(size);
 		this.size = size;
 		this.texture = texture;
-	}
-	@Override
-	public void setLocalTranslation(float x, float y, float z) {
-		// TODO Auto-generated method stub
-		super.setLocalTranslation(x, y, z);
 	}
 	public float getHealth() {
 		return health;

@@ -1,5 +1,13 @@
 package com.gmail.bruno.jumpandshoot.Http;
-
+/*
+ * HttpMain
+ * 
+ * Version 1.0
+ *
+ * 2012-05-27
+ * 
+ * Copyright © 2012, Bruno Gustav Lanevik. All rights reserved.
+ */
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
