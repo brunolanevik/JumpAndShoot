@@ -1,8 +1,6 @@
 package com.gmail.bruno.jumpandshoot;
 
 import com.jme3.app.SimpleApplication;
-import com.jme3.scene.Mesh;
-import com.jme3.scene.shape.Box;
 
 /*
  * Main
@@ -23,8 +21,7 @@ public class Main extends SimpleApplication{
 	@Override
 	public void simpleInitApp() {
 		// TODO Auto-generated method stub
-		Mesh playerMesh = new Mesh();
-		Box box1 = new Box();
+		
 	}
 
 }
