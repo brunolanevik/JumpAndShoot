@@ -9,19 +9,15 @@ package com.gmail.bruno.jumpandshoot.Entity;
  * 
  * Copyright © 2012, Bruno Gustav Lanevik. All rights reserved.
  */
-import com.jme3.scene.Geometry;
+
+import com.jme3.scene.Spatial;
 
 /*Super object for entities*/
-public abstract class Entity extends Geometry{
-	protected float size, health, damage;
+public abstract class Entity extends Spatial{
+	protected float size, health, damage, posX, posY,  posZ;
 	protected String texture;
-	public Entity(float x, float y, float z, float health, float damage, float size, String texture){
-		this.health = health;
-		this.damage = damage;
-		this.setLocalTranslation(x, y, z);
-		this.scale(size);
-		this.size = size;
-		this.texture = texture;
+	public Entity(){
+
 	}
 	public float getHealth() {
 		return health;

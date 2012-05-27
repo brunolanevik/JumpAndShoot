@@ -19,6 +19,4 @@ public abstract class Projectile extends Arrow{
 		this.setArrowExtent(extent);
 	}
 
-	protected boolean isMelee;
-	
 }

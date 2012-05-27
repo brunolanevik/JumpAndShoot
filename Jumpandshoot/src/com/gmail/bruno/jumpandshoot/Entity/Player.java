@@ -1,6 +1,14 @@
 package com.gmail.bruno.jumpandshoot.Entity;
 
+import java.util.Queue;
+
 import com.gmail.bruno.jumpandshoot.Weapons.Weapon;
+import com.jme3.bounding.BoundingVolume;
+import com.jme3.collision.Collidable;
+import com.jme3.collision.CollisionResults;
+import com.jme3.collision.UnsupportedCollisionException;
+import com.jme3.scene.SceneGraphVisitor;
+import com.jme3.scene.Spatial;
 
 /*
  * Player
@@ -14,10 +22,8 @@ import com.gmail.bruno.jumpandshoot.Weapons.Weapon;
 public class Player extends Entity{
 	protected String ip, name;
 	protected int damageModifier;
-	public Player(float x, float y, float z, int health, int damage, float size, String ip, String name, String texture, Weapon[] weapon) {
-		super(x, y, z, health, damage, size, texture);
-		this.name = name;
-		this.ip = ip;
+	public Player() {
+
 		// TODO Auto-generated constructor stub
 	}
 	public String getIp() {
@@ -31,5 +37,47 @@ public class Player extends Entity{
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	@Override
+	public int collideWith(Collidable arg0, CollisionResults arg1)
+			throws UnsupportedCollisionException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	protected void breadthFirstTraversal(SceneGraphVisitor arg0,
+			Queue<Spatial> arg1) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public Spatial deepClone() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void depthFirstTraversal(SceneGraphVisitor visitor) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public int getTriangleCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public int getVertexCount() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public void setModelBound(BoundingVolume modelBound) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void updateModelBound() {
+		// TODO Auto-generated method stub
+		
 	}
 }
