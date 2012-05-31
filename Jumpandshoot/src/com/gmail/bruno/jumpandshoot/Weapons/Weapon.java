@@ -14,7 +14,9 @@ import com.jme3.scene.Geometry;
 
 public abstract class Weapon{
 	protected int damageModifier, bulletSpread, charge;
+	protected Arrow projectile;
 	protected Spatial model;
+	protected String name;
 	protected String path;
 	protected boolean isChargeable;
 	public Weapon(int damageModifier, int bulletSpread, int charge, String path, boolean isChargeable){
@@ -59,5 +61,17 @@ public abstract class Weapon{
 	}
 	public Spatial getSpatial(){
 		return model;
+	}
+	public void setName(String name){
+		this.name = name;
+	}
+	public String getName(){
+		return name;
+	}
+	public void setProjectile(Arrow projectile){
+		this.projectile = projectile
+	}
+	public Arrow getProjectile(){
+		return projectile;
 	}
 }
