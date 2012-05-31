@@ -7,15 +7,16 @@ package com.gmail.bruno.jumpandshoot.Entity;
  *
  * 2012-05-27
  * 
- * Copyright © 2012, Bruno Gustav Lanevik. All rights reserved.
+ * Copyright ï¿½ 2012, Bruno Gustav Lanevik. All rights reserved.
  */
 
 import com.jme3.scene.Spatial;
 
 /*Super object for entities*/
-public abstract class Entity extends Spatial{
+public abstract class Entity{
 	protected float size, health, damage, posX, posY,  posZ;
 	protected String texture;
+	protected Spatial model;
 	public Entity(){
 
 	}
@@ -37,5 +38,10 @@ public abstract class Entity extends Spatial{
 	public void setSize(float size) {
 		this.size = size;
 	}
-	
+	public void setSpatial(Spatial s){
+		this.model = s;
+	}
+	public Spatial getSpatial(){
+		return spatial;
+	}
 }
