@@ -16,7 +16,9 @@ import com.jme3.scene.Spatial;
 public abstract class Entity{
 	protected float size, health, damage, posX, posY,  posZ;
 	protected String texture;
+	protected Arrow projectile;
 	protected Spatial model;
+	protected Weapon weapon;
 	public Entity(){
 
 	}
@@ -43,5 +45,17 @@ public abstract class Entity{
 	}
 	public Spatial getSpatial(){
 		return spatial;
+	}
+	public void onKilled(){
+		
+	}
+	public void onShoot(){
+		
+	}
+	public void setWeapon(Weapon weapon){
+		this.weapon = weapon
+	}
+	public Weapon getWeapon(){
+		return weapon;
 	}
 }
