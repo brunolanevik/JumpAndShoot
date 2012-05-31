@@ -9,11 +9,12 @@ import com.jme3.scene.Geometry;
  *
  * 2012-05-27
  * 
- * Copyright © 2012, Bruno Gustav Lanevik. All rights reserved.
+ * Copyright ï¿½ 2012, Bruno Gustav Lanevik. All rights reserved.
  */
 
-public abstract class Weapon extends Geometry{
+public abstract class Weapon{
 	protected int damageModifier, bulletSpread, charge;
+	protected Spatial model;
 	protected String path;
 	protected boolean isChargeable;
 	public Weapon(int damageModifier, int bulletSpread, int charge, String path, boolean isChargeable){
@@ -53,5 +54,10 @@ public abstract class Weapon extends Geometry{
 	public void setChargeable(boolean isChargeable) {
 		this.isChargeable = isChargeable;
 	}
-	
+	public void setSpatial(Spatial s){
+		this.model = s;
+	}
+	public Spatial getSpatial(){
+		return model;
+	}
 }
