@@ -9,10 +9,11 @@ import com.jme3.scene.Geometry;
  *
  * 2012-05-27
  * 
- * Copyright © 2012, Bruno Gustav Lanevik. All rights reserved.
+ * Copyright ï¿½ 2012, Bruno Gustav Lanevik. All rights reserved.
  */
-public abstract class LevelObject extends Geometry {
+public abstract class LevelObject{
 	protected int x,y,z;
+	protected Geometry geo;
 	protected float size;
 	protected String texture;
 	public LevelObject(int x,int y, int z, float size, String texture){
