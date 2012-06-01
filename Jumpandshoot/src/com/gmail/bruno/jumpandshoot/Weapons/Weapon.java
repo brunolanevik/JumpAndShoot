@@ -18,7 +18,9 @@ public abstract class Weapon{
 	protected Spatial model;
 	protected String name;
 	protected String path;
+	
 	protected boolean isChargeable;
+	protected boolean isLumens;
 	public Weapon(int damageModifier, int bulletSpread, int charge, String path, boolean isChargeable){
 		this.damageModifier = damageModifier;
 		this.bulletSpread = bulletSpread;
@@ -69,9 +71,12 @@ public abstract class Weapon{
 		return name;
 	}
 	public void setProjectile(Arrow projectile){
-		this.projectile = projectile
+		this.projectile = projectile;
 	}
 	public Arrow getProjectile(){
 		return projectile;
+	}
+	public boolean isLumensWeapon(){
+		return isLumens;
 	}
 }
