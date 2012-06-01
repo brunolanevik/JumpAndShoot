@@ -79,4 +79,7 @@ public abstract class Weapon{
 	public boolean isLumensWeapon(){
 		return isLumens;
 	}
+	public boolean isLumensWeapon(boolean isLumens){
+		return this.isLumens = isLumens;
+	}
 }
