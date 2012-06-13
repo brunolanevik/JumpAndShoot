@@ -17,10 +17,11 @@ import com.jme3.scene.Spatial;
  *
  * 2012-05-27
  * 
- * Copyright © 2012, Bruno Gustav Lanevik. All rights reserved.
+ * Copyright ï¿½ 2012, Bruno Gustav Lanevik. All rights reserved.
  */
 public class Player extends Entity{
 	protected String ip, name;
+	protected boolean status;
 	protected int damageModifier;
 	public Player() {
 
@@ -79,5 +80,15 @@ public class Player extends Entity{
 	public void updateModelBound() {
 		// TODO Auto-generated method stub
 		
+	}
+	public boolean isOnline(boolean status){
+		this.status = status;
+		return this.status;
+	}
+	public boolean isOnline(){
+		return this.status;
+	}
+	public boolean kick(){
+		return false;
 	}
 }
