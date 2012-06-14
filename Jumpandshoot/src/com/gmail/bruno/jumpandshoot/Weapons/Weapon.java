@@ -13,7 +13,7 @@ import com.jme3.scene.Geometry;
  */
 
 public abstract class Weapon{
-	protected int damageModifier, bulletSpread, charge;
+	protected int damageModifier, bulletSpread, charge, explosiveRad;
 	protected Arrow projectile;
 	protected Spatial model;
 	protected String name;
@@ -21,6 +21,7 @@ public abstract class Weapon{
 	
 	protected boolean isChargeable;
 	protected boolean isLumens;
+	protected boolean isExplosive
 	public Weapon(int damageModifier, int bulletSpread, int charge, String path, boolean isChargeable){
 		this.damageModifier = damageModifier;
 		this.bulletSpread = bulletSpread;
@@ -81,5 +82,12 @@ public abstract class Weapon{
 	}
 	public boolean isLumensWeapon(boolean isLumens){
 		return this.isLumens = isLumens;
+	}
+	public boolean isExplosive(boolean isExplosive){
+		this.isExplosive = isExplosive
+		return this.isExplosive;
+	}
+	public boolean isExplosive(){
+		return this.isExplosive;
 	}
 }
